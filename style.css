@@ -1,0 +1,224 @@
+/*
+Baseline - a designer framework
+Copyright (C) 2009 Stephane Curzi, ProjetUrbain.com
+Creative Commons Attribution-Share Alike 3.0 License
+version 0.5
+*/
+
+/******************** Reset ********************/
+html, body, div, span, a, img,
+h1, h2, h3, h4, h5, h6, hgroup, p,
+dl, dialog, dt, dd, ol, ul, li, 
+abbr, acronym, address, b, big, blockquote, 
+cite, code, del, dfn, em, i, ins, kbd, pre, q, 
+samp, tt, var, small, strong, sub, sup, 
+object, iframe, form, fieldset, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, nav, section,
+figure, menu, time, mark, audio, video						{ font-family: inherit; font-size: 100%; font-weight: inherit; font-style: inherit; vertical-align: baseline; white-space: normal; text-align: left; margin: 0; padding: 0; border: 0; outline: 0; background: transparent; }
+textarea													{ font-family: inherit; font-size: 100%; font-weight: normal; font-style: normal; white-space: normal; text-align: left; margin: 0; padding: 0; }
+article, aside, footer, header, nav, section,
+dialog, figure, hgroup, menu								{ display: block; }
+
+h1, h2, h3, h4, h5, h6										{ font-size: 100%; font-weight: normal; }
+del, ins													{ text-decoration: none; }
+ol, ul														{ list-style: none; }
+nav ul														{ list-style-type: none; }
+table														{ border-collapse: separate; border-spacing: 0; background-color: transparent; width: auto; height: auto; }
+:focus														{ outline: 0; }
+blockquote:before, blockquote:after, q:before, q:after		{ content: ""; }
+blockquote, q												{ quotes: "" ""; }
+input														{ margin: 0; }
+
+
+/********** Deprecated and obsolete elements **********/
+applet, basefont, dir, font, isindex, menu, s, strike, u	{ font-family: inherit; font-size: 100%; font-weight: normal; font-style: normal; white-space: normal; vertical-align: baseline; text-decoration: inherit; text-align: left; color: inherit; margin: 0; padding: 0; border: 0; outline: 0; }
+dir, menu													{ list-style: none; }
+nobr														{ white-space: normal; }
+blink														{ text-decoration: none; }
+marquee														{ overflow: visible; }
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('eot'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#webfontfvFLBU0N') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'AaarghNormal';
+	src: url('fonts/Aaargh-webfont.eot');
+	src: local('☺'), url('fonts/Aaargh-webfont.woff') format('woff'), url('fonts/Aaargh-webfont.ttf') format('truetype'), url('fonts/Aaargh-webfont.svg#webfontFQ3XYLDa') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SortsMillGoudyRegular';
+	src: url('fonts/GoudyStM-webfont.eot');
+	src: local('☺'), url('fonts/GoudyStM-webfont.woff') format('woff'), url('fonts/GoudyStM-webfont.ttf') format('truetype'), url('fonts/GoudyStM-webfont.svg#webfontuJixCSe1') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'SortsMillGoudyItalic';
+	src: url('fonts/GoudyStM-Italic-webfont.eot');
+	src: local('☺'), url('fonts/GoudyStM-Italic-webfont.woff') format('woff'), url('fonts/GoudyStM-Italic-webfont.ttf') format('truetype'), url('fonts/GoudyStM-Italic-webfont.svg#webfonto679uXZB') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	background: url('images/whitey.png') top left repeat;
+}
+
+body {
+    color:#252525;
+    font: 16px/20px 'SortsMillGoudyRegular', Georgia, serif;
+}
+
+iframe {
+    padding:5px;
+    background:#FFF;
+}
+
+.wrapper {
+    width:800px;
+    margin:0 auto;
+    display:block;
+    padding:20px;
+}
+
+section.alt {
+    display:block;
+    background: url('images/black_linen.png') top left repeat;
+    -webkit-box-shadow:0 0 10px #333;
+    width:100%;
+    margin-bottom:25px;
+}
+
+section.alt h2 {
+    color:#EEE;
+}
+
+h1 {
+    text-align:center;
+    font: 134px/140px 'BebasNeueRegular', Arial, sans-serif;
+    letter-spacing: 0;
+    text-shadow:2px 2px 5px #252525;
+    margin-bottom:30px;
+}
+
+h2 {
+    text-align:center;
+    font: 24px/26px 'AaarghNormal', Arial, sans-serif;
+}
+
+h3 {
+    color:#EEE;
+    font: 16px/20px 'AaarghNormal', Arial, sans-serif;
+    margin:0 0 15px 0;
+    width:100%;
+}
+
+p {
+    margin-bottom:20px;
+}
+
+strong {
+    font-weight:bold;
+}
+
+ul#three_col {
+    display:inline-block;
+    margin:20px 0;
+}
+
+ul#three_col li {
+    float:left;
+    width:250px;
+    text-align:center;
+    margin:0 6px;
+}
+
+ul#rates {
+    margin:20px 0 0 0;
+}
+
+ul#rates li {
+    text-align:center;
+}
+
+h3 span {
+    color:#888;
+    text-align:right;
+}
+
+a img {
+    padding:5px;
+    background:#EEE;
+}
+
+ul.glance {
+    list-style:none;
+    display:inline-block;
+    margin-bottom:0;
+}
+
+ul.glance li {
+    float:left;
+    margin-left:20px;
+}
+
+ul.glance li:first-child {
+    margin-left:0px;
+}
+
+ul.glance li a {
+    display:block;
+}
+
+ul.glance li a img {
+    width:243px;
+}
+
+ul.glance.wide li a img {
+    width:380px;
+}
+
+form {
+    margin:20px auto 0;
+    width:400px;
+}
+
+form input, form textarea {
+    width:380px;
+    clear:both;
+    padding:10px;
+    border:0;
+    margin:10px 0;
+    font-size:1em;
+}
+
+form textarea {
+    height:200px;
+}
+
+form input[type="submit"] {
+    width:400px;
+    background:#FFF;
+}
+
+footer {
+    margin-bottom:50px;
+}
+
+footer p {
+    text-align:center;
+}
