@@ -109,7 +109,7 @@ section.alt h2 {
 
 h1 {
     text-align:center;
-    font: 134px/140px 'BebasNeueRegular', Arial, sans-serif;
+    font: 120px/120px 'BebasNeueRegular', Arial, sans-serif;
     letter-spacing: 0;
     text-shadow:2px 2px 5px #252525;
     margin-bottom:30px;
@@ -123,6 +123,15 @@ h1 a {
 h2 {
     text-align:center;
     font: 24px/26px 'AaarghNormal', Arial, sans-serif;
+    margin:20px 0;
+}
+
+h3.address {
+    color:#252525;
+    text-align:center;
+    font: 18px/20px 'AaarghNormal', Arial, sans-serif;
+    margin:0 0 15px 0;
+    width:100%;
 }
 
 h3 {
@@ -142,7 +151,7 @@ strong {
 
 ul#three_col {
     display:inline-block;
-    margin:20px 0;
+    margin:10px 0;
 }
 
 ul#three_col li {
@@ -152,11 +161,17 @@ ul#three_col li {
     margin:0 6px;
 }
 
-ul#rates {
-    margin:20px 0 0 0;
+ul#three_col li li li {
+    list-style-type:square;
+    text-align:left;
+    margin-left:40%;
 }
 
-ul#rates li {
+ul#rates {
+    margin:10px 0 0 0;
+}
+
+ul#rates li, ul#accomodations li {
     text-align:center;
 }
 
